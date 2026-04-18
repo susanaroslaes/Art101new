@@ -1,0 +1,15 @@
+body {
+    background: oklch(85.929% 0.08296 228.418);
+    padding: 30px;
+}
+
+h1,
+h2,
+h3 {
+    color: #f66dc4;
+    font-family: fantasy;
+}
+
+img {
+    width: 200px;
+}
