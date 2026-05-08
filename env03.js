@@ -9,3 +9,4 @@ let mainEntity = {
     isMoving: true,
     favoriteElement: environmentElements[1]
 };
+
