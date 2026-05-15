@@ -33,7 +33,6 @@ img {
     background: #f3f7ff;
     padding: 30px;
     border-left: 6px solid #1d1184;
-    flex:;
     font-size: small;
 }
 
@@ -48,9 +47,14 @@ img {
 }
 
 h4 {
-    background: #f3f7ff;
+    background: #8c919a;
     padding: 30px;
-    border-left: 6px solid #1d1184;
+    border-left: 6px solid #1a1732;
     flex: 0;
     font-size: small;
+
+    img {
+    width: 200px;
+    }
+
 }
