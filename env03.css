@@ -1,7 +1,9 @@
 body {
     background: rgb(133, 81, 235);
     background-image: url(paper.webp);
+   
 }
+
 
 h1,
 h2,
@@ -58,3 +60,6 @@ h4 {
     }
 
 }
+
+
+
