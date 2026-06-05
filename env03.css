@@ -1,8 +1,11 @@
 body {
     background: rgb(133, 81, 235);
     background-image: url(paper.webp);
+    background-size: cover;
+
    
 }
+
 
 
 h1,
@@ -54,9 +57,9 @@ h4 {
     border-left: 6px solid #1a1732;
     flex: 0;
     font-size: small;
-
     img {
     width: 200px;
     }
+
 
 }

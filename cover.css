@@ -1,5 +1,6 @@
 body {
-  background-image: url(old\ paper.webp);
+  background-image: url(new\ old\ paper.jpeg);
+  background-size: cover;
   
    
 }
@@ -8,4 +9,17 @@ h1{
     color: #564304;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: xx-large;
+    text-align: center;
+}
+
+h2{
+    color: #564304;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+  
+}
+h3{
+   color: #564304;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  
 }
