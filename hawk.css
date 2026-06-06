@@ -53,13 +53,17 @@ img {
 
 h4 {
     background: #8c919a;
-    padding: 30px;
+    padding: 20px;
     border-left: 6px solid #1a1732;
     flex: 0;
     font-size: small;
+    
     img {
     width: 200px;
     }
 
 
 }
+ img {
+    width: 300px;
+    }
