@@ -1,4 +1,25 @@
 body {
-    background: rgb(173, 188, 239);
+    background: rgb(112, 205, 255);
    
+}
+
+canvas{
+    background-color: aliceblue;
+    background-image: url('path/to/your/image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 96.3vh;
+    width: 99vw;
+}
+
+.box{
+    position: absolute;
+    background: rgba(9, 7, 75, 0.8);
+    width: 33vw;
+    height: 69vh;
+    margin: 3vh auto;
+    top: 11.5vh;
+    left: 34vw;
+    
 }
