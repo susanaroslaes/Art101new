@@ -15,10 +15,10 @@ img {
 }
 
 #page {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto 0 auto;
     background: rgb(37, 26, 190);
-    padding: 30px;
+    padding: 60px;
     border-radius: 12px;
 }
 
@@ -65,7 +65,8 @@ img {
     background: #e4ded2;
     padding: 20px;
     border-radius: 12px;
-    width: 90%;
+    width: 9%;
+     margin: 0 auto 0 auto;
 }
 
 .navigation h2 {
@@ -82,8 +83,9 @@ img {
 }
 
 img {
-    width: 900px;
+    width: 200px;
     height: 250px;
-    margin: 2000 auto;
+    margin: 20px auto;
+    
     
 }

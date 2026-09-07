@@ -1,0 +1,77 @@
+body {
+    background-color: #1729e9;
+}
+
+canvas {
+    background-color: aqua;
+    background-image: none;
+    border: 1px solid black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 96vw;
+    width: 99vw;
+}
+
+#victoryScreen {
+    display: none;
+    background-color: rgba(70, 12, 109, 0.5);
+    background-image: none;
+    border: 1px solid black;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 96.3vw;
+    width: 99vw;
+}
+
+html {
+    font-family: "Bitcount Grid Double", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "slnt" 0, "CRSV" 0.5, "ELSH" 0, "ELXP" 0;
+}
+
+.box {
+    position: absolute;
+    background: #4a5198;
+    width: 33vw;
+    height: 69vw;
+    margin: 3vh;
+    top: 11.5vh;
+    left: 34vw;
+    border-radius: 2vw;
+}
+
+.buttons {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 5vh;
+    left: 12vw;
+    gap: 3.5vh;
+}
+
+.buttons img {
+    height: 16vh;
+}
+
+#menu {
+    position: absolute;
+    display: none;
+    bottom: 10vh;
+    left: 35vw;
+}
+
+#organize {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    bottom: 0.1vh;
+    left: 2vw;
+}
+
+// musiccontainer//
+//srfcontainer//
+
