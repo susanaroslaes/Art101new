@@ -1,65 +1,106 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+p {color: blue; font-size: large; font-weight: bold;}
+
+p strong {font-weight: normal;}
+li{ text-align: center;}
+
+html{font-family: Arial, Helvetica, sans-serif; background-color: #065490;}
+
+span {background-color: rgb(28, 172, 59);}
+
+/* select all html tags that have a class highlight_01 */
+.highlight_01 {background-color:rgb(42, 185, 185);}
+
+.highlight_02 {background-color: rgb(78, 182, 198);}
+
+.highlight_03 {background-color: rgb(238, 255, 161);}
+
+#pink-huge {width: 150px;}
+#pink-medium {width: 99px;}
+#pink-small {width: 50px;}
+
+
+.test-div {background-color: rgb(194, 249, 255); margin: 30px;
+padding: 40px;
 }
+
+.my-flex {display: flex;}
+
 
 body {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: aquamarine;
-}
-
-.container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #1d1184;
-}
-
-.card {
-    width: 400px;
-    border-bottom: 1px solid #000;
-    position: sticky;
-    height: 400px;
-    background-color: #e4ded2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    background: oklch(85.045% 0.07335 228.23);
     padding: 30px;
+}
+
+h1,
+h2,
+h3 {
+    color: #1096ef;
+    font-family: fantasy;
+}
+
+#page {
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+    background: rgb(37, 26, 190);
+    padding: 20px;
     border-radius: 12px;
 }
 
-@keyframes bernardo {
-    0% {
-        left: 0;
-    }
-    100% {
-        left: 20%;
-    }
+.top-section {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin: 0 0 25px 0;
 }
 
-@keyframes run {
-    0% {
-        right: -10%;
-    }
-    100% {
-        right: 100%;
-    }
+
+#introduction h2 {
+    font-style: italic;
+    margin-top: 0;
+}
+
+#introduction p { 
+    font-size: 120%;
+    line-height: 1.5;
+}
+
+.profile {
+    text-align: center;
+    flex: 1;
+}
+
+.profile img {
+    width: 220px;
+    border-radius: 12px;
+}
+
+.profile p {
+    font-size: 90%;
+}
+
+.navigation {
+    background: #1dc84b;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+}
+
+.navigation h2 {
+    margin-top: 0;
+}
+
+.navigation li {
+    margin-bottom: 8px;
+}
+
+.navigation a {
+    color: #1d1184;
+    font-weight: bold;
 }
 
 img {
-    width: 20px;
-    height: px;
-    margin: 200 auto;
+    width: 900px;
+    height: 250px;
+    margin: 2000 auto;
     
 }
