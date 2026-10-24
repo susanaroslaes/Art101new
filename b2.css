@@ -21,8 +21,9 @@ body {
 h1,
 h2,
 h3 {
-    color: #1096ef;
+    color: #047ccc;
     font-family: fantasy;
+    font-size: 250%;
 }
 
 #page {
@@ -68,22 +69,22 @@ h3 {
 }
 
 .navigation {
-    background: #1dc84b;
+    background: #8db9e9;
     padding: 20px;
     border-radius: 12px;
     width: 90%;
 }
 
 .navigation h2 {
-    margin-top: 0;
+    margin-top: 200px;
 }
 
 .navigation li {
-    margin-bottom: 8px;
+    margin-bottom: 35px;
 }
 
 .navigation a {
-    color: #1d1184;
+    color: #df8938;
     font-weight: bold;
 }
 
@@ -92,4 +93,9 @@ img {
     height: 250px;
     margin: 2000 auto;
     
+}
+p {
+    margin-top: 90px;
+    font-size: 120%;
+    line-height: 1.5;
 }
