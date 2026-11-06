@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- All techy stuff goes here, inside HEAD -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Overall title of your page -->
+    <title>Testing</title>
+
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Link to external JavaScript file -->
+    <script src="photo.js" defer></script>
+</head>
+
+<body>
+    <!-- Main content goes here, inside BODY -->
+    <h1>Testing Photos</h1>
+<button onclick="prevImage()">Back</button>
+    <img id="myImage" src="Star.webp" width="300px" />
+<button onclick="nextImage()"> Next </button>
+
+<script> const images = ["Silly.jpeg", "Smiling.jpeg", "Eat.jpeg"];
+  let currentIndex = 0;
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length; // Increments and loops automatically
+    document.getElementById("myImage").src = images[currentIndex];
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length; // Decrements and loops automatically
+    document.getElementById("myImage").src = images[currentIndex];
+  }
+
+
+</script>
+
+
+
+
+
+
+    <div id="output"></div>
+</body>
+
+</html>
