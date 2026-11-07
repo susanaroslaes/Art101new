@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- All techy stuff goes here, inside HEAD -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Link to external JavaScript file -->
+    <script src="change.css" defer></script>
+
+    <title>Image Slider</title>
+    
+    <style>
+        /* Centers the gallery on your screen */
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .slider-container {
+            text-align: center;
+        }
+
+        /* Set a fixed size for the image area */
+        img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Styles the button */
+        button {
+            margin: 0 10px;
+            margin-top: 15px;
+            padding: 10px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007acc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            transition: background 0.2s;
+            
+        }
+
+        button:hover {
+            background-color: #005999;
+        }
+    </style>
+</head>
+<div class="slider-container">
+    <!-- The target image that will change -->
+    <img id="myImage" src="Silly.jpeg" alt="Slider Image">
+    
+    <!-- Next and Back buttons -->
+    <div class="buttons">
+        <button onclick="changeImage(-1)">Back</button>
+        <button onclick="changeImage(1)">Next</button>
+    </div>
+</div>
+
+<script>
+    // 1. Put your image URLs or file paths in this array
+    const images = [
+        "Smiling.jpeg",
+        "Eat.jpeg",
+        "Up.jpeg",
+        "Star.webp",
+    ];
+
+    // 2. Track the index of the image currently being displayed
+    let currentIndex = 0;
+
+    // 3. The function that handles changing the image
+    function changeImage(direction) {
+        // Update the current index based on the direction (-1 or 1)
+        currentIndex = currentIndex + direction;
+
+        // Loop back to the end if going past the first image
+        if (currentIndex < 0) {
+            currentIndex = images.length - 1;
+        }
+        
+        // Loop back to the beginning if going past the last image
+        if (currentIndex >= images.length) {
+            currentIndex = 0;
+        }
+
+        // Update the source attribute of the image element
+        document.getElementById("myImage").src = images[currentIndex];
+    }
+</script>
+
+</body>
+</html>
