@@ -3,159 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Pop-Up Gift Box</title>
+    <title>Interactive Envelope & Long Letter</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+        :root {
+            --bg-color: #f4f1ea;
+            --env-color: #db545a;
+            --env-dark: #b83b41;
+            --env-light: #f06c71;
+            --paper-color: #ffffff;
+            --seal-color: #a12c31;
         }
 
         body {
-            background-color: #fce4ec;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Georgia', serif;
             overflow: hidden;
         }
 
-        .gift-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        /* Container to center everything */
+        .envelope-wrapper {
             position: relative;
             cursor: pointer;
+            transform: translateY(20px);
+            transition: transform 0.5s ease;
         }
 
-        /* The Box Container */
-        .gift-box {
+        /* The Main Envelope Body */
+        .envelope {
             position: relative;
-            width: 150px;
-            height: 150px;
-            background-color: #ff4081;
-            border-bottom-left-radius: 8px;
-            border-bottom-right-radius: 8px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease;
+            width: 400px;
+            height: 260px;
+            background-color: var(--env-dark);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            
         }
 
-        /* Vertical Ribbon */
-        .gift-box::before {
+        /* Front bottom flap */
+        .envelope::before {
             content: '';
             position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 30px;
-            height: 100%;
-            background-color: #ffeb3b;
+            z-index: 3;
+            border-left: 200px solid transparent;
+            border-right: 200px solid transparent;
+            border-bottom: 135px solid var(--env-color);
+            bottom: 0;
+            left: 0;
         }
 
-        /* The Lid */
-        .box-lid {
+        /* Front right-side covering flap */
+        .envelope::after {
+            content: '';
             position: absolute;
-            top: -20px;
-            left: 45px;
-            width: 160px;
-            height: 25px;
-            background-color: #e91e63;
+            z-index: 3;
+            border-top: 130px solid transparent;
+            border-bottom: 135px solid transparent;
+            /* Pointing left to cover the right side */
+            border-left: 205px solid var(--env-light); 
+            top: -5px;
+            left: 0;
+        }
+
+        /* FIX 1: New Left Flap to perfectly mirror and cover the left edge */
+        .left-flap {
+            position: absolute;
+            z-index: 3;
+            border-top: 130px solid transparent;
+            border-bottom: 135px solid transparent;
+            /* Pointing right to cover the left side */
+            border-right: 200px solid var(--env-light); 
+            top: -5px;
+            right: 0;
+        }
+
+        /* The Top Flap (Lid) */
+        .top-flap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-left: 200px solid transparent;
+            border-right: 200px solid transparent;
+            border-top: 142px solid var(--env-color);
+            transform-origin: top;
+            transition: transform 0.4s ease 0.3s, z-index 0.1s ease 0.3s;
+            z-index: 4;
+        }
+
+        /* The Heat/Wax Seal */
+        .wax-seal {
+            position: absolute;
+            top: 120px;
+            left: 178px;
+            width: 44px;
+            height: 44px;
+            background: var(--seal-color);
+            border-radius: 50%;
+            z-index: 5;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2), inset 0 0 6px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .wax-seal::after {
+            content: '♥';
+            color: var(--env-light);
+            font-size: 22px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* The Letter Paper */
+        .letter {
+            position: absolute;
+            left: 20px;
+            bottom: 0; 
+            width: 360px;
+            height: 230px;
+            background-color: var(--paper-color);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            z-index: 1; 
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.1) 0.3s, 
+                        height 0.5s ease 0.5s, 
+                        z-index 0.1s ease 0.3s;
             border-radius: 4px;
-            box-shadow: 0 4px 5px rgba(0,0,0,0.1);
-            z-index: 2;
-            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-sizing: border-box;
+            padding: 25px;
         }
 
-        /* Lid Ribbon */
-        .box-lid::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 30px;
+        /* Scrollable Content Container for Long Text */
+        .letter-content {
+            width: 100%;
             height: 100%;
-            background-color: #ffeb3b;
+            overflow-y: hidden;
+            padding-right: 5px;
+            box-sizing: border-box;
+            color: #333;
+            line-height: 1.6;
+            font-size: 15px;
         }
 
-        /* The Surprise Gift hidden inside */
-        .surprise-gift {
-            position: absolute;
-            top: 20px;
-            font-size: 5rem;
-            z-index: 1;
-            opacity: 0;
-            transform: scale(0.1) translateY(0);
-            transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease;
-            pointer-events: none;
+        /* Custom Scrollbar Styling for a cleaner look */
+        .letter-content::-webkit-scrollbar {
+            width: 6px;
+        }
+        .letter-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .letter-content::-webkit-scrollbar-thumb {
+            background: var(--env-dark);
+            border-radius: 3px;
         }
 
-        /* --- Animations when Active/Opened --- */
+        /* --- OPEN STATE ANIMATIONS --- */
         
-        /* Gentle hover shake to invite clicks */
-        .gift-container:hover .gift-box {
-            transform: scale(1.05);
+        .envelope-wrapper.open .top-flap {
+            transform: rotateX(180deg);
+            z-index: 1;
+            transition: transform 0.4s ease, z-index 0.1s ease 0.1s;
         }
 
-        /* Lid flies off when box is opened */
-        .gift-container.open .box-lid {
-            transform: translateY(-80px) rotate(-15deg);
-            opacity: 0.1;
+        .envelope-wrapper.open .wax-seal {
+            transform: scale(0);
+            opacity: 0;
         }
 
-        /* Gift pops up boldly */
-        .gift-container.open .surprise-gift {
-            opacity: 1;
-            transform: scale(1.5) translateY(-110px);
+        .envelope-wrapper.open .letter {
+            transform: translateY(-160px);
+            height: 380px; 
+            z-index: 5;
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.1) 0.2s, 
+                        height 0.5s ease 0.5s, 
+                        z-index 0.1s ease 0.2s;
         }
 
-        /* Hint Text */
-        .hint {
-            margin-top: 30px;
-            color: #880e4f;
-            font-weight: bold;
-            font-size: 1.2rem;
-            background: rgba(255, 255, 255, 0.6);
-            padding: 8px 16px;
-            border-radius: 20px;
-            pointer-events: none;
+        .envelope-wrapper.open .letter-content {
+            overflow-y: auto;
+            transition: overflow-y 0s step-end 0.8s;
+        }
+
+        /* Subtle hover effect before opening */
+        .envelope-wrapper:hover:not(.open) {
+            transform: translateY(10px);
         }
     </style>
 </head>
 <body>
 
-    <div class="gift-container" id="giftContainer">
-        <!-- The Surprise Item (You can swap the emoji for an image tag!) -->
-        <div class="surprise-gift" id="gift">💐</div>
-        
-        <!-- The Physical Box structure -->
-        <div class="box-lid"></div>
-        <div class="gift-box"></div>
-        
-        <!-- Action Label -->
-        <div class="hint" id="hintText">Click to open your gift!</div>
+    <div class="envelope-wrapper" id="envelopeWrapper">
+        <div class="top-flap"></div>
+        <div class="envelope">
+            <!-- FIX 2: Added the dedicated HTML element for the left triangle wrap -->
+            <div class="left-flap"></div>
+            <div class="letter">
+                <div class="letter-content">
+                    <h3>Dear Bernardo,</h3>
+                    <p>I'm so happy and grateful I have you in my life. It's been 365 days that we've been together and so much has happened. I'm excited to see what the upcoming years have for us, good or bad. I know we will be fine. It has never been a dull moment since the day I met you 1,570 days ago on July 23, 2022. It has been full of joy, friendship and love. I’ve learned so much from you and I’m forever grateful. You taught me how to love and what being loved by someone feels like. You’re always there for me, your patience and understanding. You understand even before I can even understand myself. I love you with all my heart and I hope I can be the light that you are for me. I hope that we never stop joking around and being best friends and keep growing together. I wouldn't have it any other way but with you by my side.</p>
+                </div>
+            </div>
+        </div>
+        <div class="wax-seal"></div>
     </div>
 
     <script>
-        const container = document.getElementById('giftContainer');
-        const hintText = document.getElementById('hintText');
+        const envelope = document.getElementById('envelopeWrapper');
         
-        // Array of optional alternative gifts to cycle through on click
-        const gifts = ['💐', '🌹', '🧸💜', '🌺', '🌼', '💝','🌷'];
-
-        container.addEventListener('click', () => {
-            // Toggle the open class to trigger CSS animations
-            const isOpen = container.classList.toggle('open');
-            
-            if (isOpen) {
-                hintText.textContent = "Click to close!";
-            } else {
-                hintText.textContent = "Click to open your gift!";
-                // Cycle to a random new gift when closed so the next open is a surprise
-                const randomGift = gifts[Math.floor(Math.random() * gifts.length)];
-                document.getElementById('gift').textContent = randomGift;
-            }
+        envelope.addEventListener('click', (e) => {
+            if (e.target.closest('.letter-content')) return;
+            envelope.classList.toggle('open');
         });
     </script>
+
 </body>
 </html>

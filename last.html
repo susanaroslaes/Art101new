@@ -8,13 +8,12 @@
 <body>
 
  <div id="page">
-    <h1>It's Been a whole year together!</h1>
+    
 
 <div class="navigation">
-    <h2>Welcome guys!</h2>
-    <p>Topping marzipan biscuit jelly beans candy jujubes. Caramels cookie topping chocolate tart donut donut.
-        Shortbread cake gummies fruitcake dragée sweet roll. Jelly pie toffee candy canes fruitcake caramels
-        gingerbread lemon drops.</p>
+    <h2>Happy Anniversary!</h2>
+    <p>Over the past year, we've shared so many amazing moments together. I'm grateful to have you by my side. I hope you like the surprises I've prepared for you. I love you!</p>
+
  </div>
  <div class="profile">
     
@@ -81,7 +80,7 @@
     <li>I love your sense of humor even if I say your not funny</li>
     <li>I love the way we can talk about anything and make so many jokes</li>
     <li>I love the way you talk about things your interested in, I love the sparkle you get when you tell me about it </li>
-    <li>I love the way your patient, supportive and understanding </li>
+    <li>I love the way your patience, supportive and understanding </li>
     <li>I love the way your inner thought works and how sincere, honest, kind and thoughtful  you are </li>
     <li>I love how free spirit and charismatic you are, and how you can roll with anything good or bad  </li>
     <li>I love the way your fully yourself no expectation you carry yourself with such grace and humbleness </li>
@@ -90,14 +89,14 @@
  </div>
  <div class="profile">
         <h2>Songs That Remind Me of You</h2>  
-
- 
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5y2ijHECwFYWqcAHKTZgzD?utm_source=generator&theme=0&si=e879be1388a14e02" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6ewcR0FnLdKjIt9gcMghrQ?utm_source=generator&si=c5fa53482cdd41c4" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1OWBh1eVxUdA1Z6UA8r4nh?utm_source=generator&si=911dad229c5b4bad" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3WvPycGo4WJEEGYP429aap?utm_source=generator&theme=0&si=5dde67dac3b94829" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0InIeZW4P6VO7dUGRM4AKH?utm_source=generator&si=2cda12610a754cd8" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7I1kle4TNmkfednJDKo8GR?utm_source=generator&si=f50d1d8f66fe4680" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+ 
+
 </div>
 
  <div class="navigation">
@@ -111,6 +110,7 @@
             justify-content: center;
             position: relative;
             cursor: pointer;
+            margin-top: 150px;
         }
 
         /* The Box Container */
@@ -148,6 +148,7 @@
             box-shadow: 0 4px 5px rgba(0,0,0,0.1);
             z-index: 2;
             transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            
         }
 
         /* Lid Ribbon */
@@ -190,6 +191,7 @@
         .gift-container.open .surprise-gift {
             opacity: 1;
             transform: scale(1.5) translateY(-110px);
+           
         }
 
         /* Hint Text */
@@ -202,6 +204,7 @@
             padding: 8px 16px;
             border-radius: 20px;
             pointer-events: none;
+           
         }
     </style>
 </head>
@@ -242,7 +245,227 @@
     </script>
     
      </div>    
-     <p>  It been 365 day that we have been together!  I learned so much this year Happy Anniversary! I love you with all my heart.</p>
+     <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Envelope & Long Letter</title>
+    <style>
+        :root {
+            --bg-color: #f4f1ea;
+            --env-color: #db545a;
+            --env-dark: #b83b41;
+            --env-light: #f06c71;
+            --paper-color: #ffffff;
+            --seal-color: #a12c31;
+        }
+
+     
+    
+
+        /* Container to center everything */
+        .envelope-wrapper {
+            align-items: center;
+            cursor: pointer;
+            transform: translateY(20px);
+            transition: transform 0.5s ease;
+            margin-top: 50px;
+            padding: 50px;
+        }
+
+        /* The Main Envelope Body */
+        .envelope {
+            position: relative;
+            width: 400px;
+            height: 260px;
+            background-color: var(--env-dark);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            
+            
+        }
+
+        /* Front bottom flap */
+        .envelope::before {
+            content: '';
+            position: absolute;
+            z-index: 3;
+            border-left: 200px solid transparent;
+            border-right: 200px solid transparent;
+            border-bottom: 135px solid var(--env-color);
+            bottom: 0;
+            left: 0;
+            
+        }
+
+        /* Front right-side covering flap */
+        .envelope::after {
+            content: '';
+            position: absolute;
+            z-index: 3;
+            border-top: 130px solid transparent;
+            border-bottom: 135px solid transparent;
+            /* Pointing left to cover the right side */
+            border-left: 205px solid var(--env-light); 
+            top: -5px;
+            left: 0;
+        }
+
+        /* FIX 1: New Left Flap to perfectly mirror and cover the left edge */
+        .left-flap {
+            position: absolute;
+            z-index: 3;
+            border-top: 130px solid transparent;
+            border-bottom: 135px solid transparent;
+            /* Pointing right to cover the left side */
+            border-right: 200px solid var(--env-light); 
+            top: -5px;
+            right: 0;
+        }
+
+        /* The Top Flap (Lid) */
+        .top-flap {
+            position: absolute;
+            top: auto;
+            left: auto;
+            border-left: 200px solid transparent;
+            border-right: 200px solid transparent;
+            border-top: 142px solid var(--env-color);
+            transform-origin: top;
+            transition: transform 0.4s ease 0.3s, z-index 0.1s ease 0.3s;
+            z-index: 4;
+        }
+
+        /* The Heat/Wax Seal */
+        .wax-seal {
+            position: absolute;
+            top: 160px;
+            left: 230px;
+            width: 44px;
+            height: 44px;
+            background: var(--seal-color);
+            border-radius: 50%;
+            z-index: 5;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2), inset 0 0 6px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .wax-seal::after {
+            content: '♥';
+            color: var(--env-light);
+            font-size: 22px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* The Letter Paper */
+        .letter {
+            position: absolute;
+            left: 20px;
+            bottom: 0; 
+            width: 360px;
+            height: 230px;
+            background-color: var(--paper-color);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            z-index: 1; 
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.1) 0.3s, 
+                        height 0.5s ease 0.5s, 
+                        z-index 0.1s ease 0.3s;
+            border-radius: 4px;
+            box-sizing: border-box;
+            padding: 25px;
+        }
+
+        /* Scrollable Content Container for Long Text */
+        .letter-content {
+            width: 100%;
+            height: 100%;
+            overflow-y: hidden;
+            padding-right: 5px;
+            box-sizing: border-box;
+            color: #333;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        /* Custom Scrollbar Styling for a cleaner look */
+        .letter-content::-webkit-scrollbar {
+            width: 6px;
+        }
+        .letter-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .letter-content::-webkit-scrollbar-thumb {
+            background: var(--env-dark);
+            border-radius: 3px;
+        }
+
+        /* --- OPEN STATE ANIMATIONS --- */
+        
+        .envelope-wrapper.open .top-flap {
+            transform: rotateX(180deg);
+            z-index: 1;
+            transition: transform 0.4s ease, z-index 0.1s ease 0.1s;
+        }
+
+        .envelope-wrapper.open .wax-seal {
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        .envelope-wrapper.open .letter {
+            transform: translateY(-160px);
+            height: 380px; 
+            z-index: 5;
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.1) 0.2s, 
+                        height 0.5s ease 0.5s, 
+                        z-index 0.1s ease 0.2s;
+        }
+
+        .envelope-wrapper.open .letter-content {
+            overflow-y: auto;
+            transition: overflow-y 0s step-end 0.8s;
+        }
+
+        /* Subtle hover effect before opening */
+        .envelope-wrapper:hover:not(.open) {
+            transform: translateY(10px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="envelope-wrapper" id="envelopeWrapper">
+        <div class="top-flap"></div>
+        <div class="envelope">
+            <!-- FIX 2: Added the dedicated HTML element for the left triangle wrap -->
+            <div class="left-flap"></div>
+            <div class="letter">
+                <div class="letter-content">
+                    <h3>Dear Bernardo,</h3>
+                    <p>I'm so happy and grateful I have you in my life. It's been 365 days that we've been together and so much has happened. I'm excited to see what the upcoming years have for us, good or bad. I know we will be fine. It has never been a dull moment since the day I met you 1,570 days ago on July 23, 2022. It has been full of joy, friendship and love. I’ve learned so much from you and I’m forever grateful. You taught me how to love and what being loved by someone feels like. You’re always there for me, your patience and understanding. You understand even before I can even understand myself. I love you with all my heart and I hope I can be the light that you are for me. I hope that we never stop joking around and being best friends and keep growing together. I wouldn't have it any other way but with you by my side.</p>
+                </div>
+            </div>
+        </div>
+        <div class="wax-seal"></div>
+    </div>
+
+    <script>
+        const envelope = document.getElementById('envelopeWrapper');
+        
+        envelope.addEventListener('click', (e) => {
+            if (e.target.closest('.letter-content')) return;
+            envelope.classList.toggle('open');
+        });
+    </script>
+
+</body>
+</html>
+
     </div>
 
  </div>
