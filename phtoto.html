@@ -13,43 +13,16 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <!-- Link to external JavaScript file -->
-    <script src="photo.js" defer></script>
+    <script src="photo.css" defer></script>
 </head>
 
 <body>
-    <!-- Main content goes here, inside BODY -->
-    <h1>Testing Photos</h1>
-<button onclick="prevImage()">Back</button>
-    <img id="myImage" src="Star.webp" width="300px" />
+<!-- Example of what the pasted Spotify embed code looks like -->
+ <div class="navigation">
 
-  
-<button onclick="nextImage()">Next</button>
-
-<!-- Wrap your button inside this container -->
-
-
-<script> const images = ["Silly.jpeg", "Smiling.jpeg", "Eat.jpeg", "Up.jpeg",];
-  let currentIndex = 0;
-
-  function nextImage() {
-    currentIndex = (currentIndex + 1) % images.length; // Increments and loops automatically
-    document.getElementById("myImage").src = images[currentIndex];
-  }
-
-  function prevImage() {
-    currentIndex = (currentIndex - 1 + images.length) % images.length; // Decrements and loops automatically
-    document.getElementById("myImage").src = images[currentIndex];
-  }
-
-
-</script>
-
-
-
-
-
-
-    <div id="output"></div>
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5y2ijHECwFYWqcAHKTZgzD?utm_source=generator&theme=0&si=e879be1388a14e02" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6ewcR0FnLdKjIt9gcMghrQ?utm_source=generator&si=c5fa53482cdd41c4" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
 </body>
 
 </html>
