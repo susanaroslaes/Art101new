@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- All techy stuff goes here, inside HEAD -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="photo.css" rel="stylesheet" type="text/css">
 
-    <!-- Overall title of your page -->
-    <title>Testing</title>
+    <title>Interactive Gift Box</title>
+    <link rel="stylesheet" href="style.css">
 
-    <!-- jQuery library -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-    <!-- Link to external JavaScript file -->
-    <script src="photo.css" defer></script>
 </head>
-
 <body>
-<!-- Example of what the pasted Spotify embed code looks like -->
- <div class="navigation">
 
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5y2ijHECwFYWqcAHKTZgzD?utm_source=generator&theme=0&si=e879be1388a14e02" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6ewcR0FnLdKjIt9gcMghrQ?utm_source=generator&si=c5fa53482cdd41c4" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
+    <div class="present-container" id="present">
+        <div class="lid"></div>
+        <div class="box">
+            <div class="gift-content" id="gift"> 💐 </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
+

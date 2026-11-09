@@ -65,20 +65,16 @@ img {
     background: #8bb9e9;
     padding: 20px;
     border-radius: 12px;
+    margin-top: 20px;
+    
 }
 
 .navigation h2 {
     margin-top: 0;
+     text-align: center;
 }
 
-.navigation li {
-    margin-bottom: 8px;
-}
 
-.navigation a {
-    color: #1d1184;
-    font-weight: bold;
-}
 p {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -94,7 +90,7 @@ p {
   button {
             margin: 0 10px;
             margin-top: 15px;
-            margin-bottom: 55px;
+            margin-bottom: 15px;
             padding: 10px 25px;
             font-size: 16px;
             cursor: pointer;
